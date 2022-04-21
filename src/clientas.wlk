@@ -7,7 +7,7 @@ object ludmila{
 }
 
 object anaMaria{
-	var estaEstable= false
+	var estaEstable=22
 	
 	method estaEstable(){
 		return estaEstable
@@ -30,5 +30,21 @@ object teresa{
 	
 	method precioPorKm(){
 		return self.precioKm()
+	}
+}
+
+object melina{
+	var trabajaPara
+	
+	method trabajaPara(nombreClienta){
+		trabajaPara= nombreClienta
+	}
+	
+	method trabajaPara(){
+		return trabajaPara
+	}
+	
+	method precioPorKm(){
+		return (self.trabajaPara().precioPorKm() - 3)
 	}
 }

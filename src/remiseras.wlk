@@ -28,3 +28,19 @@ object juana{
 		}
 	}
 }
+
+object lucia{
+	var reemplazoDe
+	
+	method reemplazoDe(nombreRemisera){
+		reemplazoDe= nombreRemisera
+	}
+	
+	method reemplazoDe(){
+		return reemplazoDe
+	}
+	
+	method precioPorViaje(cliente, cantidadKms){
+		return (self.reemplazoDe().precioPorViaje(cliente, cantidadKms))
+	}
+}
