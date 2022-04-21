@@ -7,7 +7,7 @@ object ludmila{
 }
 
 object anaMaria{
-	var estaEstable=22
+	var estaEstable= false
 	
 	method estaEstable(){
 		return estaEstable
