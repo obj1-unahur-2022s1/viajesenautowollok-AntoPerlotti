@@ -26,7 +26,12 @@ object oficina {
 		segundaRemisera= remisera
 	}
 	
-	method intercambiarRemiseras(){
+	method intercambiarRemiseras(remisera1, remisera2){
+		primeraRemisera= remisera2
+		segundaRemisera= remisera1
+		self.asignarRemiseras(primeraRemisera, segundaRemisera)
+		
+		
 		//self.asignarRemiseras(self.segundaRemisera(), self.primeraRemisera()) OPCION 1
 		/*primeraRemisera= self.segundaRemisera()
 		segundaRemisera=  self.primeraRemisera()  //OPCION 2*/
