@@ -1,4 +1,3 @@
-import remiseras.*
 object ludmila{
 	method precioPorKm(){
 		return 18
@@ -12,6 +11,7 @@ object anaMaria{
 	method estaEstable(){
 		return estaEstable
 	}
+	
 	method precioPorKm(){
 		if(not estaEstable){
 			return 30

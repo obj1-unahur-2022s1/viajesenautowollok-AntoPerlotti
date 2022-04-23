@@ -65,7 +65,7 @@ test "Precio por 2 km de Juana a cada clienta" {
 	
 }
 
-test "Reemplazo de Lucia a Gabriela con Melina trabajando para Ludmila en viaje de 1 km y 10 km"{
+test "Reemplazo de Lucia a Gabriela con Melina trabajando para Ludmila en viaje de 1 km y 10 km" {
 	melina.trabajaPara(ludmila)
 	lucia.reemplazoDe(gabriela)
 	assert.equals(180, lucia.precioPorViaje(melina,10))
