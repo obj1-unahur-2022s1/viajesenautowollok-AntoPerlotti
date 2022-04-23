@@ -1,0 +1,73 @@
+import remiseras.*
+import clientas.*
+
+test "Precio por 10 km de Roxana a cada clienta" {
+
+	assert.equals(180, roxana.precioPorViaje(ludmila,10))
+	assert.equals(300, roxana.precioPorViaje(anaMaria,10))
+	assert.equals(220, roxana.precioPorViaje(teresa,10))
+	
+}
+
+test "Precio por 10 km de Gabriela a cada clienta" {
+
+	assert.equals(216, gabriela.precioPorViaje(ludmila,10))
+	assert.equals(360, gabriela.precioPorViaje(anaMaria,10))
+	assert.equals(264, gabriela.precioPorViaje(teresa,10))
+	
+}
+
+test "Precio por 10 km de Mariela a cada clienta" {
+
+	assert.equals(180, mariela.precioPorViaje(ludmila,10))
+	assert.equals(300, mariela.precioPorViaje(anaMaria,10))
+	assert.equals(220, mariela.precioPorViaje(teresa,10))
+	
+}
+
+test "Precio por 10 km de Juana a cada clienta" {
+
+	assert.equals(200, juana.precioPorViaje(ludmila,10))
+	assert.equals(200, juana.precioPorViaje(anaMaria,10))
+	assert.equals(200, juana.precioPorViaje(teresa,10))
+	
+}
+
+test "Precio por 2 km de Roxana a cada clienta" {
+
+	assert.equals(36, roxana.precioPorViaje(ludmila,2))
+	assert.equals(60, roxana.precioPorViaje(anaMaria,2))
+	assert.equals(44, roxana.precioPorViaje(teresa,2))
+	
+}
+
+test "Precio por 2 km de Gabriela a cada clienta" {
+
+	assert.equals(43.2, gabriela.precioPorViaje(ludmila,2))
+	assert.equals(72, gabriela.precioPorViaje(anaMaria,2))
+	assert.equals(52.8, gabriela.precioPorViaje(teresa,2))
+	
+}
+
+test "Precio por 2 km de Mariela a cada clienta" {
+
+	assert.equals(50, mariela.precioPorViaje(ludmila,2))
+	assert.equals(60, mariela.precioPorViaje(anaMaria,2))
+	assert.equals(50, mariela.precioPorViaje(teresa,2))
+	
+}
+
+test "Precio por 2 km de Juana a cada clienta" {
+
+	assert.equals(100, juana.precioPorViaje(ludmila,2))
+	assert.equals(100, juana.precioPorViaje(anaMaria,2))
+	assert.equals(100, juana.precioPorViaje(teresa,2))
+	
+}
+
+test "Reemplazo de Lucia a Gabriela con Melina trabajando para Ludmila en viaje de 1 km y 10 km"{
+	melina.trabajaPara(ludmila)
+	lucia.reemplazoDe(gabriela)
+	assert.equals(180, lucia.precioPorViaje(melina,10))
+	assert.equals(18, lucia.precioPorViaje(melina,1))
+}

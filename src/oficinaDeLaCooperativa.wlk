@@ -29,7 +29,7 @@ object oficina {
 	method intercambiarRemiseras(){
 		//self.asignarRemiseras(self.segundaRemisera(), self.primeraRemisera()) OPCION 1
 		/*primeraRemisera= self.segundaRemisera()
-		segundaRemisera=  self.primeraRemisera()  OPCION 2*/
+		segundaRemisera=  self.primeraRemisera()  //OPCION 2*/
 		//NINGUNA FUNCIONA
 	}
 	
