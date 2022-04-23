@@ -14,3 +14,10 @@ test "Test de viaje de 4 km para Roxana o Juana" {
 	assert.equals(roxana, oficina.remiseraElegidaParaViaje(teresa, 4))
 
 }
+
+test "Cambio de remiseras" {
+	oficina.asignarRemiseras(roxana, juana)
+	oficina.intercambiarRemiseras()
+	assert.equals(juana, oficina.primeraRemisera())
+	assert.equals(roxana, oficina.segundaRemisera())
+}
