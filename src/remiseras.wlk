@@ -1,35 +1,36 @@
+/*
+ * Remiseras: Muy bien. Solo te dejo sugerencias para simplificar código. 
+ */
+
 import clientas.*
 
 object roxana{
-	method precioPorViaje(cliente, cantidadKms){
-		return (cliente.precioPorKm() * cantidadKms)
-	}
+	/* Te dejo la versión resumida para estos métodos de consulta */
+	method precioPorViaje(cliente, cantidadKms) = 
+		cliente.precioPorKm() * cantidadKms
 }
 
 object gabriela{
-	method precioPorViaje(cliente, cantidadKms){
-		return (cliente.precioPorKm() * cantidadKms * 1.2)
-	}
+	/* va versión resumida */
+	method precioPorViaje(cliente, cantidadKms) = 
+		cliente.precioPorKm() * cantidadKms * 1.2
 }
 
 object mariela{
-	
-	method precioPorViaje(cliente, cantidadKms){
-		return (50.max(cliente.precioPorKm() * cantidadKms))
-	}
+	/* Muy bien implementado el método max() en precioPorViaje */	
+	method precioPorViaje(cliente, cantidadKms) = 
+		50.max(cliente.precioPorKm() * cantidadKms)
 }
 
 object juana{
-	method precioPorViaje(cliente, cantidadKms){
-		if(cantidadKms<= 8){
-			return 100
-		} else{
-			return 200
-		}
-	}
+	/* Otro forma más resumida */
+	method precioPorViaje(cliente, cantidadKms) =
+		if(cantidadKms<= 8) 100  
+		else 200 
 }
 
 object lucia{
+	/* Va más abajo la forma resumida para precioPorViaje de lucia */
 	var reemplazoDe
 	
 	method reemplazoDe(nombreRemisera){
@@ -40,7 +41,6 @@ object lucia{
 		return reemplazoDe
 	}
 	
-	method precioPorViaje(cliente, cantidadKms){
-		return (self.reemplazoDe().precioPorViaje(cliente, cantidadKms))
-	}
+	method precioPorViaje(cliente, cantidadKms) = 
+		reemplazoDe.precioPorViaje(cliente, cantidadKms)
 }

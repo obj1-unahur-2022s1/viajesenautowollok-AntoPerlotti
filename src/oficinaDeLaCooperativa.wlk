@@ -1,3 +1,7 @@
+/*
+ * Oficina: Muy bien. Solo dejo una sugerencia mínima. 
+ */
+
 import remiseras.*
 import clientas.*
 
@@ -30,11 +34,13 @@ object oficina {
 		self.asignarRemiseras(segundaRemisera, primeraRemisera)
 	}
 	
-	method remiseraElegidaParaViaje(cliente, kms){
-		if(self.primeraRemisera().precioPorViaje(cliente, kms) - self.segundaRemisera().precioPorViaje(cliente, kms) > 30){
-			return self.segundaRemisera()
-		} else{
-			return self.primeraRemisera()
-		}
-	}	
+	method remiseraElegidaParaViaje(cliente, kms) =
+		/* Te dejo una variante que delega parte del cálculo en otro método
+		 * para hacer más simples las expresiones, pero está bien tu implementación
+		 */
+		if (self.difPrecio(cliente,kms) > 30) segundaRemisera else primeraRemisera
+
+	method difPrecio(cliente,kms) = 
+		primeraRemisera.precioPorViaje(cliente,kms) - segundaRemisera.precioPorViaje(cliente,kms)
+		
 }
