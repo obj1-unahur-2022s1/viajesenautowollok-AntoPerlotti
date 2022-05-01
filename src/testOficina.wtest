@@ -1,3 +1,6 @@
+/*
+ * Test Oficina: Muy bien los test.
+ */
 import remiseras.*
 import clientas.*
 import oficinaDeLaCooperativa.*
